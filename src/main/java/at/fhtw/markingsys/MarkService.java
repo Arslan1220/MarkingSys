@@ -4,12 +4,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 
-public class Service {
+public class MarkService {
     public String getComplementary(String number) {
         int num;
         num = Integer.valueOf(number);
-
-
         if(num >=88) {
             return "1";
         }

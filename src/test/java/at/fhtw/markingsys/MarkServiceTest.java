@@ -1,22 +1,17 @@
 package at.fhtw.markingsys;
 
-import at.fhtw.markingsys.Service;
-import at.fhtw.markingsys.Controller;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 
 
-
-
-class ServiceTest {
+class MarkServiceTest {
 
     @Autowired
     Controller Controller;
 
     @Autowired
-    Service Service;
+    MarkService MarkService;
     @Test
     void getComplementary() {
         Assertions.assertEquals("1", Controller.getComplementary("96"));
@@ -24,6 +19,7 @@ class ServiceTest {
 
     @Test
     void testGetComplementary() {
-        Assertions.assertEquals("3", Service.getComplementary("65"));
+        Assertions.assertEquals("3", MarkService.getComplementary("65"));
     }
+
 }
